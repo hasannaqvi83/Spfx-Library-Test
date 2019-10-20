@@ -1,0 +1,45 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/react-dom": "^16.9.2",
+    "spfx-library": "0.0.1",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0",
+    "sass-graph": "^3.0.4",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "serve": "concurrently --kill-others \"node-sass --watch src/css/ -o src/css\" \"react-app-rewired start\"",
+    "scss": "node-sass --watch src/css/ -o src/css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "concurrently": "^5.0.0",
+    "react-app-rewired": "^2.1.3"
+  }
+}
