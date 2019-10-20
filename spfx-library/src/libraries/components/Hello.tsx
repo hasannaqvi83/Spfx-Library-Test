@@ -7,7 +7,13 @@ export interface IHelloProps {
 
 export const Hello = (props: IHelloProps): JSX.Element => {
     return (
-        <div className={styles.Hello} >
-            <span className={styles.heading}>Hello {props.name}</span>
-        </div>);
+
+        <fieldset>
+            <legend>This is a Hello webpart from spfx-library</legend>
+            <div className={styles.Hello} >
+                <span className={styles.Heading}>Hello {props.name} from SPFx Library component with black and white background.</span>
+            </div>
+        </fieldset>
+
+    );
 };

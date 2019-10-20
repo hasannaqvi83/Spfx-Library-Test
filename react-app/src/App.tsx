@@ -7,15 +7,13 @@ import './css/Test.css';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Hello name={'Hasan1'} />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Hello name={'from SPFx Library'} />
         <div className='Test'>
-          <span className="testScss">Test SCSS</span>
+          <span className="testScss">Test SCSS from within React App</span>
         </div>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"

@@ -1,7 +1,10 @@
 .Hello {
-  .heading {
+  width: 100%;
+  background: black;
+  min-height: 100px;
+  .Heading {
     font-size: 18px;
     font-weight: bold;
-    color: blue;
+    color: white;
   }
 }

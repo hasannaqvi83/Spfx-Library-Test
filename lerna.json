@@ -1,7 +1,8 @@
 {
   "packages": [
     "spfx-library/**",
-    "react-app/**"
+    "react-app/**",
+    "spfx-app/**"
   ],
   "version": "independent"
 }
