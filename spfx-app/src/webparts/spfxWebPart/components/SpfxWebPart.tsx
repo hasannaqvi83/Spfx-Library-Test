@@ -12,7 +12,7 @@ export default class SpfxWebPart extends React.Component<ISpfxWebPartProps, {}> 
           <div className={styles.row}>
             <div className={styles.column}>
               <span className={styles.title}>Welcome to SharePoint!</span>
-              <Hello name={'from SPFx Library'} />
+              <Hello title={'from SPFx Library'} />
             </div>
           </div>
         </div>
