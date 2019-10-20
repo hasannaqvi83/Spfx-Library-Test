@@ -10,7 +10,7 @@ const App: React.FC = () => {
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Hello name={'from SPFx Library'} />
+        <Hello title={'from SPFx Library'} />
         <div className='Test'>
           <span className="testScss">Test SCSS from within React App</span>
         </div>

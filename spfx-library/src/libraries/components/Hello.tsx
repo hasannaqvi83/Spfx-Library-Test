@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Hello.module.scss';
 
 export interface IHelloProps {
-    name: string;
+    title: string;
 }
 
 export const Hello = (props: IHelloProps): JSX.Element => {
@@ -11,7 +11,7 @@ export const Hello = (props: IHelloProps): JSX.Element => {
         <fieldset>
             <legend>This is a Hello webpart from spfx-library</legend>
             <div className={styles.Hello} >
-                <span className={styles.Heading}>Hello {props.name} from SPFx Library component with black and white background.</span>
+                <span className={styles.Heading}>Hello {props.title}, with blue and yellow background.</span>
             </div>
         </fieldset>
 
