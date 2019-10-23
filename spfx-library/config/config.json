@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "MyDayLibraryStrings": "lib/libraries/myLib/loc/{locale}.js"
+    "MyDayLibraryStrings": "lib/libraries/myLib/loc/en-us.js",
+    "HelloStrings": "lib/components/Hello/loc/en-us.js"
   }
 }
