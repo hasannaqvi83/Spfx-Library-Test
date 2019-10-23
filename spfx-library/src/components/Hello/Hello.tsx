@@ -1,30 +1,41 @@
 import * as React from 'react';
 import styles from './Hello.module.scss';
-//import * as strings from 'HelloStrings';
-import { useEffect, useState } from 'react';
+import strings from './loc';
+import { useState } from 'react';
 
 export interface IHelloProps {
     title: string;
 }
 
-export const Hello = (props: IHelloProps): JSX.Element => {
-    const [isLoading, setLoading] = useState(true);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-    });
+export class Hello extends React.Component<IHelloProps, { lang: string }> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lang: 'en'
+        };
+    }
 
-    if (isLoading)
-        return <span>{'strings.Loading'}</span>;
-    else
-        return (
-            <fieldset>
-                <legend>This is a Hello webpart from spfx-library</legend>
-                <div className={styles.Hello} >
-                    <span className={styles.Heading}>Hello {props.title}, with blue and yellow background.</span>
-                </div>
-            </fieldset>
 
-        );
-};
+    render() {
+        strings.setLanguage(this.state.lang);
+
+        const { props } = this;
+        const isLoading = false;
+
+        if (isLoading)
+            return <span>{strings.Loading}</span>;
+        else
+            return (<div>
+                <input type="button" onClick={() => {
+                    this.setState({ lang: 'fr' });
+                }} value="Change Language"></input>
+                <fieldset>
+                    <legend>This is a Hello webpart from spfx-library</legend>
+                    <div className={styles.Hello} >
+                        <span className={styles.Heading}> {strings.Loading} : Hello {props.title}, with blue and yellow background.</span>
+                    </div>
+                </fieldset>
+            </div>
+            );
+    }
+}

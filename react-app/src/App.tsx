@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Hello } from 'spfx-library';
 import styles from './App.module.scss';
-
 import './css/Test.css';
+
+declare var MyLibraryStrings: any;
 
 const App: React.FC = () => {
   return (

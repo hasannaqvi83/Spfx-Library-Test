@@ -26,4 +26,5 @@ build.configureWebpack.mergeConfig({
     }
   });
   
+  require('./gulpfile.generatelocalkeys.js');
   build.initialize(gulp);

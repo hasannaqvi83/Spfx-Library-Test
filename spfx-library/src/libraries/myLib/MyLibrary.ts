@@ -1,7 +1,8 @@
-import * as strings from 'MyLibraryStrings';
+// import { LocaleKeys } from '../loc/LocaleKeys';
+// import { LocalizationLibrary } from '../localization/LocalizationLibrary';
 
 export class MyLibrary {
   public name(): string {
-    return strings.BasicGroupName;
+    return ''; //LocalizationLibrary.getLocale(LocaleKeys.Name);
   }
 }

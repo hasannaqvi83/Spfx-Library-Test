@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "7.6.0",
     "@svgr/webpack": "4.3.2",
+    "@types/es6-promise": "0.0.33",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
     "@types/react-dom": "^16.9.2",
@@ -46,10 +47,10 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
-    "react": "^16.10.2",
+    "react": "^16.9.0",
     "react-app-polyfill": "^1.0.4",
     "react-dev-utils": "^9.1.0",
-    "react-dom": "^16.10.2",
+    "react-dom": "^16.9.0",
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "sass-graph": "^3.0.4",
@@ -89,7 +90,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^16.9.9",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "concurrently": "^5.0.0"
   },
   "jest": {
