@@ -15,8 +15,7 @@ export class Hello extends React.Component<IHelloProps, { lang: string }> {
         };
     }
 
-
-    render() {
+    public render() {
         strings.setLanguage(this.state.lang);
 
         const { props } = this;

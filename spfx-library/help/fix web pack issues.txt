@@ -1,0 +1,15 @@
+https://github.com/facebook/react/issues/13991
+
+Fix hooks
+---------
+I had the same issue and I resolved it by adding:
+
+ alias: {
+        react: path.resolve('./node_modules/react')
+      }
+to resolve property in webpack config of my main app.
+
+
+Fix SCSS
+---------
+line 461 in webpack config

@@ -65,6 +65,8 @@
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.1.1",
     "workbox-webpack-plugin": "4.3.1",
+    "@microsoft/microsoft-graph-client": "^2.0.0",
+    "msal": "^1.0.0",
     "spfx-library": "0.0.1"
   },
   "scripts": {

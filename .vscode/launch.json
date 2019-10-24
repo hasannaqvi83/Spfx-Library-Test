@@ -5,11 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "stopOnEntry": true,
+            "name": "node-gulp",
+            "args": [
+                "build"
+            ],
+            "program": "${workspaceRoot}\\spfx-app\\node_modules\\gulp\\bin\\gulp.js",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": {}
+        },
+        {
+            "name": "GulpTester",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/spfx-app/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "console": "internalConsole",
         }
     ]
 }

@@ -21,18 +21,8 @@ export default class SpfxWebPartWebPart extends BaseClientSideWebPart<ISpfxWebPa
     const element: React.ReactElement<ISpfxWebPartProps> = React.createElement(
       SpfxWebPart,
       {
-        description: this.properties.description
-      }
-    );
-
-    ReactDom.render(element, this.domElement);
-  }
-
-  public render1(): void {
-    const element: React.ReactElement<ISpfxWebPartProps> = React.createElement(
-      SpfxWebPart,
-      {
-        description: this.properties.description
+        description: this.properties.description,
+        context: this.context
       }
     );
 

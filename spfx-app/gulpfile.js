@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const path = require('path');
 const build = require('@microsoft/sp-build-web');
 build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
 
@@ -16,14 +17,17 @@ build.configureWebpack.mergeConfig({
         else {
             generatedConfiguration.output.publicPath = "/dist/";
         }
-  
+
         //Without below code, SharePoint is going to pull React from the version that comes with SharePoint Online and not include any React dependencies in your bundle.
         //To pull from our installed version of React, we update our configuration as follows:
         generatedConfiguration.externals = generatedConfiguration.externals
-        .filter(name => !(["react", "react-dom"].includes(name)))
-  
+            .filter(name => !(["react", "react-dom"].includes(name)))
+        console.log('path : ', JSON.stringify(generatedConfiguration.resolve.alias));
+
+        generatedConfiguration.resolve.alias = Object.assign(generatedConfiguration.resolve.alias, { react: path.resolve('./node_modules/react') });
+
         return generatedConfiguration;
     }
-  });
-  
-  build.initialize(gulp);
+});
+
+build.initialize(gulp);
