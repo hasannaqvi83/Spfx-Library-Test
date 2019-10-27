@@ -1,7 +1,8 @@
 {
   "packages": [
-    "react-lib/**",
-    "spfx-app/**"
+    "spfx-library/**",
+    "spfx-app/**",
+    "react-lib-rollup/**"
   ],
   "version": "independent"
 }

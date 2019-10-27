@@ -13,7 +13,6 @@
   },
   "externals": {},
   "localizedResources": {
-    "SpfxWebPartWebPartStrings": "lib/webparts/spfxWebPart/loc/{locale}.js",
-    "MyLibraryStrings": "node_modules/spfx-library/lib/libraries/loc/{locale}.js"
+    "SpfxWebPartWebPartStrings": "lib/webparts/spfxWebPart/loc/{locale}.js"
   }
 }

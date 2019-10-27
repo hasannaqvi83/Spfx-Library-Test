@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import styles from './App.module.scss';
 import './css/Test.css';
-import { Hello, TestHook1, UserInfo } from 'spfx-library';
+import { Hello, TestHook1, UserInfo } from '../node_modules/spfx-library';
 import { Client } from '@microsoft/microsoft-graph-client';
 import { ImplicitMSALAuthenticationProvider } from '../node_modules/@microsoft/microsoft-graph-client/lib/src/ImplicitMSALAuthenticationProvider';
 import { MSALAuthenticationProviderOptions } from '../node_modules/@microsoft/microsoft-graph-client/lib/src/MSALAuthenticationProviderOptions';

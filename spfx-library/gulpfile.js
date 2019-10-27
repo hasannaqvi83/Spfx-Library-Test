@@ -20,7 +20,7 @@ build.configureWebpack.mergeConfig({
         //Without below code, SharePoint is going to pull React from the version that comes with SharePoint Online and not include any React dependencies in your bundle.
         //To pull from our installed version of React, we update our configuration as follows:
         generatedConfiguration.externals = generatedConfiguration.externals
-        .filter(name => !(["react", "react-dom"].includes(name)))
+        .filter(name => !(["react", "react-dom"].includes(name)));
   
         return generatedConfiguration;
     }

@@ -2,8 +2,9 @@ import * as React from 'react';
 import styles from './SpfxWebPart.module.scss';
 import { ISpfxWebPartProps } from './ISpfxWebPartProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import { Hello, TestHook1, UserInfo } from 'spfx-library';
+import { Hello, TestHook1, UserInfo } from '../../../../../spfx-library';
 import { MSGraphClientFactory, MSGraphClient } from '@microsoft/sp-http';
+import { MyComponent } from '@hasan/my-react-component-library';
 
 export default class SpfxWebPart extends React.Component<ISpfxWebPartProps, {}> {
   private _graphFactory: MSGraphClientFactory;
@@ -18,7 +19,7 @@ export default class SpfxWebPart extends React.Component<ISpfxWebPartProps, {}> 
 
   public async componentDidMount(): Promise<void> {
     this._client = await this._graphFactory.getClient();
-
+    this.forceUpdate();
   }
 
   public render(): React.ReactElement<ISpfxWebPartProps> {
@@ -31,6 +32,8 @@ export default class SpfxWebPart extends React.Component<ISpfxWebPartProps, {}> 
               <Hello title={'from SPFx Library'} />
               <TestHook1 />
               {this._client && <UserInfo client={this._client} />}
+              <br />
+              My: <MyComponent text="Hasan" color="red" />
             </div>
           </div>
         </div>
